@@ -7,7 +7,7 @@
 Function.prototype.method = function (name, func) {
     this.prototype[name] = func;
     return this;
-}
+};
 
 Function.method('curry', function() {
     var slice = Array.prototype.slice;
@@ -21,7 +21,7 @@ Function.method('curry', function() {
 
 var add = function(arg1, arg2) {
     return arg1 + arg2;
-}
+};
 
 var add1 = add.curry(1);
 console.log(add1(1)); 
