@@ -53,6 +53,9 @@ var objArr = [
     0.09,
     function () { },
     new Error("error"),
+    null,
+    false,
+    [ 0, 1, 2, 3 ],
     { key: "thing", value: "another thing" }
 ];
 
@@ -77,7 +80,14 @@ for (property in objArr) {
     console.log(typeof property);
 }
 
+var stooge = {};
+
+// The || operator can be used to fill in default values:
+var middle = stooge["middleName"] || "(none)";
+console.log(middle);
+
 // The apply method lets us construct an array of arguments to use to invoke a function.
 // It also lets us choose the value of this. The apply method takes two parameters.
 // The first is the value that should be bound to this. The second is an array of
 // parameters.
+

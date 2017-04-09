@@ -3,7 +3,7 @@
  * Here we have some fun with JavaScript scoping and function invocation
  */
 
-var MyFuncApp = MyFuncApp || {}
+var MyFuncApp = MyFuncApp || {};
 
 var a = 99;
 var b = 88;
@@ -114,3 +114,25 @@ function functionB(outerFood) {
     };
 }
 
+var empty_object = {};
+var stooge = {
+    "first-name": "Jerome",
+    "last-name": "Howard"
+};
+
+var x = stooge;
+x.nickname = 'Curly';
+var nickname = stooge.nickname;
+// nick is 'Curly' because x and stooge
+// are references to the same object
+
+if (typeof Object.create !== 'function') {
+    Object.create = function (o) {
+        var F = function () {};
+        F.prototype = o;
+        return new F();
+    };
+}
+var another_stooge = Object.create(stooge);
+
+console.log(another_stooge.nickname);
