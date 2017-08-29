@@ -9,3 +9,4 @@ if (typeof Object.create !== 'function') {
         return new F();
     };
 }
+

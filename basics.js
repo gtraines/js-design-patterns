@@ -86,8 +86,20 @@ var stooge = {};
 var middle = stooge["middleName"] || "(none)";
 console.log(middle);
 
+//ES6 example
+
+
 // The apply method lets us construct an array of arguments to use to invoke a function.
 // It also lets us choose the value of this. The apply method takes two parameters.
 // The first is the value that should be bound to this. The second is an array of
 // parameters.
+function applyExample() {
 
+}
+
+
+(function () {
+    'use strict';
+
+    fasterAsATypist();
+})()
